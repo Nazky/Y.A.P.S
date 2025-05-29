@@ -113,7 +113,7 @@ class MainWindow(QMainWindow):
 
         # Radio Buttons for selecting method
         self.radio_layout = QVBoxLayout()
-        self.goldhen_radio = QRadioButton("GoldHEN (HTTP POST on port 9023)")
+        self.goldhen_radio = QRadioButton("GoldHEN (HTTP POST on port 9090)")
         self.goldhen_radio.setChecked(True)  # Set GoldHEN as the default
         self.netcat_radio = QRadioButton("Netcat (TCP on port 9020)")
 
@@ -163,7 +163,7 @@ class MainWindow(QMainWindow):
 
         # Determine port and method based on selected radio button
         if self.goldhen_radio.isChecked():
-            port = "9023"
+            port = "9090"
             self.send_http_post(file_path, ip, port)
         elif self.netcat_radio.isChecked():
             port = "9020"
